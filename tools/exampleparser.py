@@ -102,7 +102,28 @@ def getGitInfo(exampleDir, exampleName):
     td.insert(1, "T")
     d["date"] = "".join(td)
     return d
-    
+
+def getGitInfo(path):
+    h = os.popen("git log --pretty='%%H%%n%%an%%n%%aD' -1 -- %s" % path)
+    d = dict(zip(["url", "author", "date"], h.read().strip().split("\n")))
+    h.close()
+    return d
+
+def chooseGetInfo():
+    def checkSvn():
+        try:
+            h = os.popen("svn info 2>&1")
+            h.read()
+            ret = h.close()
+            return ret == 0 or ret is None
+        except OSError, e:
+            return False
+
+    if checkSvn():
+        return getSvnInfo
+
+    return getGitInfo
+
 def createFeed(examples):
     doc = Document()
     atomuri = "http://www.w3.org/2005/Atom"
@@ -212,6 +233,8 @@ if __name__ == "__main__":
     examples = getListOfExamples(inExampleDir)
 
     modtime = time.strftime("%Y-%m-%dT%I:%M:%SZ", time.gmtime())
+
+    getInfo = chooseGetInfo()
 
     for example in examples:
         path = os.path.join(inExampleDir, example)
