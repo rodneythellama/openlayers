@@ -482,3 +482,121 @@ a.olControlZoomOut {
     -o-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
 }
+
+/**
+ * Leaflet Popup layout
+ */
+
+.leaflet-popup, .olTipFrame {
+	position: absolute;
+	text-align: center;
+	}
+.leaflet-popup-content-wrapper, .olTipFrameContentWrapper {
+	padding: 1px;
+	text-align: left;
+	}
+.leaflet-popup-content, .olTipFrameContent {
+	margin: 14px 20px;
+	}
+.leaflet-popup-tip-container, .olTipFrameTipContainerH {
+	margin: 0 auto;
+	width: 40px;
+	height: 16px;
+	position: relative;
+	overflow: hidden;
+	}
+.leaflet-popup-tip-container, .olTipFrameTipContainerV {
+	margin: 0 auto;
+	width: 16px;
+	height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	}
+.leaflet-popup-tip,
+.olTipFrameTipTop, .olTipFrameTipBottom,
+.olTipFrameTipLeft, .olTipFrameTipRight {
+	width: 15px;
+	height: 15px;
+	padding: 1px;
+
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	}
+.olTipFrameTipTop {
+	margin: -8px auto 0;
+}
+.olTipFrameTipBottom {
+	margin: 8px auto 0;
+        z-index: 1;
+}
+.olTipFrameTipLeft {
+        display: inline-block;
+        vertical-align: middle;
+	margin: auto 8px 0 8px;
+        z-index: 1;
+}
+.olTipFrameTipRight {
+        display: inline-block;
+        vertical-align: middle;
+	margin: auto -8px 0 -8px;
+}
+
+.leaflet-popup-close-button, .olTipFrameCloseButton {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+
+	width: 10px;
+	height: 10px;
+
+	overflow: hidden;
+	}
+.leaflet-popup-content p, .olTipFrameContent p {
+	margin: 18px 0;
+	}
+.leaflet-popup-scrolled, .olTipFrameScrolled {
+	overflow: auto;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	}
+
+
+/* Visual appearance */
+
+.leaflet-container {
+	background: #ddd;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #05f;
+	background: white;
+	opacity: 0.5;
+	}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip,
+.olTipFrameContentWrapper,
+ .olTipFrameTipTop, .olTipFrameTipBottom,
+ .olTipFrameTipLeft, .olTipFrameTipRight {
+	background: white;
+
+	box-shadow: 0 3px 10px #888;
+	-moz-box-shadow: 0 3px 10px #888;
+	 -webkit-box-shadow: 0 3px 14px #999;
+	}
+.leaflet-popup-content-wrapper, .olTipFrameContentWrapper {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	}
+.leaflet-popup-content, .olTipFrameContent {
+	font: 12px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+.leaflet-popup-close-button, .olTipFrameCloseButton {
+	background: white url(images/popup-close.png);
+	}
