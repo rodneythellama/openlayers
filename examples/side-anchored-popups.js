@@ -42,7 +42,7 @@ function getPopupOptions() {
     return {
         closeBox: OpenLayers.Util.getElement("show-close-button").checked,
         relativePosition: anchor[0] != "auto" ? anchor[0] : undefined,
-        fixedRelativePosition: anchor[0] == "auto",
+        fixedRelativePosition: anchor[0] !== "auto",
         orientation: anchor[1] || "h",
         autoSize: OpenLayers.Util.getElement("autosize").checked
   };
