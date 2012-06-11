@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>Hover popups and edit popups</title>
+        <link rel="stylesheet" href="../theme/default/style.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="../lib/OpenLayers.js"></script>
+        <script src="hover-popup-test.js"></script>
+        <style>
+          .olPopup {
+            border: 1.5px solid black !important;
+            border-radius: 8px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+          }
+        </style>
+    </head>
+    <body onload="init()">
+        <h1 id="title">Hover popups and edit popups</h1>
+        <div id="tags">
+            vector, feature, popup, modify, hover
+        </div>        
+        <p id="shortdesc">
+            A more complex example of popups and feature editing.<br>
+            Shows popup info bubble when hovering over features on the map
+        </p>
+        
+        <div id="map" class="smallmap"></div>
+        
+        <div id="docs">
+            <p>
+                This example shows popup info bubbles when the feature
+                is hovered over and and edit popup when the feature is
+                selected.
+            </p>
+                See the <a href="hover-popup-test.js" target="_blank">
+                hover-popup-test.js source</a> to see how this is done.
+            </p>
+        </div>
+    </body>
+</html>
