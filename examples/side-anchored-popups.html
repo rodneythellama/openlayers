@@ -21,13 +21,14 @@
         <div id="map" class="smallmap"></div>
         <div id="options">
           Options:<br/>
-          <label><input type="checkbox" id="show-close-button"> Close button</label><br/>
-          <label>Side:
+          <label><input type="checkbox" id="show-close-button"> closeBox</label><br/>
+          <label><input type="checkbox" id="autosize"> autoSize</label><br/>
+          <label>relativePosition:
             <select id="anchor-side">
-              <option value="t" selected="selected">top</option>
-              <option value="r">right</option>
-              <option value="b">bottom</option>
-              <option value="l">left</option>
+              <option value="t" selected="selected">t - top</option>
+              <option value="r">r - right</option>
+              <option value="b" selected="selected">b - bottom</option>
+              <option value="l">l - left</option>
               <option value="auto-h">Automatic Horizontal</option>
               <option value="auto-v">Automatic Vertical</option>
               <option value="auto-b">Automatic Both</option>
@@ -35,7 +36,7 @@
           </label><br/>
           Frame:
           <label><input name="frame" id="no-frame" type="radio" value="SideAnchored"> No frame (<tt>OpenLayers.Popup.SideAnchored</tt>)</label>
-          <label><input name="frame" id="tip-frame" type="radio" value="TipFrame"> Tip (<tt>OpenLayers.Popup.TipFrame</tt>)</label>
+          <label><input name="frame" id="tip-frame" type="radio" value="TipFrame" checked="checked"> Tip (<tt>OpenLayers.Popup.TipFrame</tt>)</label>
 
         </div>
         <div id="docs">
